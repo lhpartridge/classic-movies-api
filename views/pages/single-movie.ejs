@@ -1,0 +1,31 @@
+<%- include('../partials/header'); %>
+ 
+<main class="main main-single container">
+    <h2 class="main-h2 text-center"><%= name %></h2>
+    <section class="section section-single d-flex justify-content-between">
+ 
+    <!-- previous and next -->
+ 
+    <div class="prev-and-next d-flex justify-content-around">
+        <p class="prev">
+            <% if(data.id > 1) { %>
+                <a href="/movies/<%= data.id - 1 %> ">Previous</a>
+          <% } %>
+        </p>
+        <p class="next">
+            <% if(data.id +1 < count) { %>
+                <a href="/movies/<%= data.id + 1 %> ">Next</a>
+          <% } %>
+        </p>
+    </div>
+ 
+        <figure class="figure figure-single">
+            <img src="<%= data.posterURL %>" alt="<%= title %> poster" class="img-fluid">
+            <figcaption class="figcaption figcap-single">IMDB:  </figcaption>
+            <a href="https://www.imdb.com/title/<%= data.imdbId %>/"><%= data.title %></a>
+
+        </figure>
+    </section>
+</main>
+ 
+<%- include('../partials/footer'); %>
