@@ -2,11 +2,11 @@
 const express = require('express')
 const server = express()
 const router = require('./routes/router')
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3001
  
 server.set('view engine', 'ejs')
  
-//http://localhost:3000/
+//http://localhost:3001/
 server.use('/', router)
  
 server.listen(PORT, ()=> {

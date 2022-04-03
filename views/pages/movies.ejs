@@ -1,4 +1,4 @@
-<%-include ('../partials/header'); %>
+<%- include ('../partials/header'); %>
  
 <main class="main main-movies container">
     <h2 class="main-h2"><%= name %></h2>
@@ -7,14 +7,11 @@
         <!-- title, posterURL, link to IMDB -->
         <% data.forEach(item => { %>
             <div class="col-md-4">
-                <figure class="figure movie-figure">movie
+                <figure class="figure movie-figure text-center">movie
                     <a href="/movies/<%= item.id %>">
                         <img src="<%= item.posterURL %>" alt="<%= item.title %> poster" class="img-fluid poster-img">
-                        <figcaption class="figcaption figcap-"><%= item.title %></figcaption>
                     </a>
-                    <figcaption class="figcaption figcap-imdb-link">IMDB:  
-                        <a href="https://www.imdb.com/title/<%= item.imdbId %>/">Link to IMDB:  <%= item.title %></a>
-                    </figcaption>
+
                 </figure>                  
             </div>
  

@@ -1,25 +1,13 @@
 <%- include('../partials/header'); %>
    
 <main class="main main-home container-fluid">
-<div class="row screen-row">
-
-    <!-- <h2 class="home-header text-center">welcome to my classic movies page</h2> -->
-    <div class="row screen-row justify-content-around">
-        <!-- <div class="col-md-2"></div> -->
-        <div class="col-md-7 d-flex screen-col ">
-            <!-- video source: IMDB; trailer expires within 24hours -->
-        <iframe src="https://imdb-video.media-imdb.com/vi2210441241/1434659607842-pgv4ql-1564209095791.mp4?Expires=1648306133&amp;Signature=q9UemAGqHtueC-mSOt7CVDnZG8M2rn218DENJqdGY0EEvl7eWI8YE2TqHnCFbhwusi5D5epEjmjk31GuGS7I0J~kzPRGZWl~jqoPh96clITiSxeCGl~SWUWGEHQMgE7LHXFS-DmKHd0QR84qNyskpEpsojGv5dKdSlvheo6wQHlBthr5~k016oLmaRL2vjlYwqbX1wepFBkLSMtE~AEHPlY46H~0jEeoOyfJiWyJe3nG6vLoTduAY6VZw7-MQ2fnLU42ecO9lUqlrHZ9~bdDh3QrshUTe~MNUyYXxhM473inQgTQNf6SbBSiytPXGv3u0x7eqOUq-W1zncrrFW-Mtg__&amp;Key-Pair-Id=APKAIFLZBVQZ24NQH3KA" 
-        title="<% data.title %>" frameborder="0" class="trailer"
-        width="1000" height="400"
-        >
-    <!-- <div class="col-md-2"></div> -->
-
-        
-    </iframe>
-</div>
-        <!-- <%= data[Math.floor(Math.random() * data.length)].posterURL %> -->
-        <!-- <img src="https://m.media-amazon.com/images/M/MV5BNjUyMTc4MDExMV5BMl5BanBnXkFtZTgwNDg0NDIwMjE@._V1_SX300.jpg"  alt="home image" class="img-fluid home-image"> -->
-    </div>
+<div class="row screen-row d-block text-center">
+    <!-- <div class="row screen-row d-block text-center"> -->
+        <div class="col screen-col d-block text-center trailer">
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/H_3T4DGw10U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>       
+            </iframe>
+        </div>
+    <!-- </div> -->
 </main>
 
 <%- include('../partials/footer'); %>

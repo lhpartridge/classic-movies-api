@@ -1,11 +1,11 @@
 :root {
     --prim: #101111;
-    --sec: #109411;
-    --tert: #109aae;
+    --sec: #f4f800;
+    --tert: #6c1200;
     --textColor:  #eff;
-    --headerFont: 'Fredericka the Great', cursive;
+    --headerFont: 'Diplomata', cursive;
     --textFont:'Julius Sans One', sans-serif;
-    --subheaderFont: 'Gowun Batang', serif;
+    --subheaderFont: 'Limelight', serif;
 }
 
 * {box-sizing: border-box;}
@@ -13,12 +13,11 @@
 body {
     margin: 0;
     padding: 0;
-    /* background-color: #eaeaee; */
     background-color: #050102;
 }
 
 .home {
-    background-image: url("/css/media/movie-background.jpg");
+    background-image: url("/media/movie-background.jpg");
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -34,20 +33,15 @@ header {
     text-align: center;
 }
 
-.aside-header {
+a, .nav-link, .colophon {
+    font-size: 28px; 
     color: var(--textColor);
-    font-family: var(--textFont);
-    font-weight: 700;
-}
-
-
-a, .nav-link {
-    color: var(--textColor);
+    font-family: var(--subheaderFont);
     text-decoration: none;
 }
 
-a:hover {
-    color: #229900;
+a:hover, .nav-link:hover {
+    color: var(--sec);
 }
 
 .text {
@@ -60,7 +54,7 @@ a:hover {
     text-transform: uppercase;
 }
 
-/*recipes page*/
+/*moviees page*/
 
 .h1 {
     font-size: 84px;
@@ -74,33 +68,17 @@ a:hover {
     font-size: 56px;
 }
 
-.recipeDiv {
-    /* width: 90%; */
-    border-bottom: 2px solid darkgoldenrod;
-}
-
-.recipeDiv:after {
-    content: "";
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    padding-top: 20px;
-    border-bottom: 10px;
-    transition: .5s;
-}
-
-.recipeDiv:hover:after {
-    width: 110%;
-}
-
 .screen-row {
     position: relative;
 }
 
+.trailer {
+    padding-bottom: 80px;
+    object-position: center bottom;
+    object-fit: fill;
+}
+
 .home-image {
-    /* top: 200px;
-    right: 320px; */
-    /* height: 360px; */
     margin: 0 auto;
     padding: 8px;
     border-radius: 3%;
@@ -113,13 +91,47 @@ a:hover {
     font-weight: 600;
 }
 
-.nutrition-item {
-    font-size: 20px;
-}
-.figure {
-    padding-top: 110px;
-    background-image: url("/css/media/poster_background.jpg");
+.movie-figure {
+
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    padding-top: 55px;
+    padding-right: 41px;
+    text-align: center;
+    background-image: url("/media/poster_background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
     border-radius: 8%;
+}
+
+.poster-img {
+    position: absolute;
+    left: 72px;
+    max-width: 300px;
+    max-height: 400px;
+}
+
+.figure-single  {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    padding-top: 50px;
+    text-align: center;
+    background-image: url("/media/poster_background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8%;
+}
+
+.image-single {
+    position: absolute;
+    top: 53px;
+    left: 76px;
+    max-height: 395px;
+
 }
 
 .figcaption {
@@ -131,24 +143,44 @@ a:hover {
     font-size: 20px;
 }
 
-.poster-img {
-    /* max-width: 200px; */
-    margin-bottom: 20px;
-    padding-left: 28px;
-    max-width: 300px;
-    max-height: 400px;
+.figcap-single {
+    width: 80%;
 }
 
-.single-image {
-    
+.movieInfoDiv {
+    background-image: url("/media/film_background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.info-text {
+    font-size: 52px;
+    font-family: var(--subheaderFont);
+    color: var(--tert);
+}
+
+
+.imdb-text {
+    margin: 0;
+    padding: 0;
+    font-size: 36px;
+    font-family: var(--subheaderFont);
+    color: var(--tert);
+}
+
+.imdb-2-text {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+.info-image {
+    margin: 80px 0 40px 0;
+    max-height: 240px;
 }
 
 .not-found-image {
     margin: 0 auto;
-}
-
-.preparation {
-    background-color: var(--textColor);
 }
 
 .footer {
@@ -157,7 +189,10 @@ a:hover {
     font-weight: 900;
 }
 
-.trailer {
-    object-position: center bottom;
-    object-fit: fill;
+.colophon {
+    margin: 0;
+    padding: 0;
+    font-size: 16px; 
+    color: var(--textColor);
+    font-family: var(--subheaderFont);
 }

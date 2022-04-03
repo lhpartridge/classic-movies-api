@@ -1,4 +1,3 @@
-//change root to name of api
 const express = require('express')
 const router = express.Router()
 const fetch = (...args)=> import('node-fetch').then(({default: fetch}) => fetch(...args))
@@ -11,7 +10,6 @@ router.use('/movies', movieRoutes)
  
 //home route
 router.get('/', (req, res) => {
-    //copy/paste url from web api
     const URL = 'https://api.sampleapis.com/movies/classic/'
     fetch(URL)
         .then(res => res.json())

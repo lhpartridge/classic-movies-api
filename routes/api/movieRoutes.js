@@ -10,7 +10,7 @@ fetch('https://api.sampleapis.com/movies/classic/')
     })
  
 //all classic movies
-//localhost:3000/movies/classic
+//localhost:3001/movies/classic
 //copy/paste URL from api.sampleapis.com
 router.get('/', (req, res) => {
     const URL = 'https://api.sampleapis.com/movies/classic/'
@@ -21,13 +21,14 @@ router.get('/', (req, res) => {
             res.render('pages/movies', {
                 title: 'All Movies',
                 name: 'Classic Movie List',
+                body: 'all',
                 data
             })
         })
 })
  
 //single-cartoon
-//localhost:3000/movies/:id
+//localhost:3001/movies/:id
 router.get('/:id', (req, res) => {
     const id = req.params.id
     //change statement to match current api
@@ -41,12 +42,14 @@ router.get('/:id', (req, res) => {
                 res.render('pages/single-movie', {
                     title: `${data.title}`,
                     name: `${data.title}`,
+                    body: 'single',
                     data
                 })
             } else {
                 res.render('pages/404', {
                     title: '404 Error - Page not found',
-                    name: '404 Error'
+                    name: '404 Error',
+                    body: 'Error'
                 })
             }
         })
@@ -58,7 +61,7 @@ router.get('/:id', (req, res) => {
 
 //change section to match current api
 //by creator
-//localhost:3000/cartoon/creator
+//localhost:3001/cartoon/creator
 // router.get('/creator/:creator', (req, res) => {
 //     const creator = req.params.creator
 //     const URL = 'https://api.sampleapis.com/cartoons/cartoons2D'
